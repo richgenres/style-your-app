@@ -1,0 +1,14 @@
+<div class="skills">
+  <ng-container *ngIf="data; else loader">
+    <div [ngClass]="routeAnimationsElements">
+      <app-accordion>
+        <ul [@stagger]>
+          <li [@slideUpFade] *ngFor="let f of data">
+            {{ f }}
+          </li>
+        </ul>
+      </app-accordion>
+    </div>
+  </ng-container>
+  <ng-template #loader> <app-loader></app-loader></ng-template>
+</div>

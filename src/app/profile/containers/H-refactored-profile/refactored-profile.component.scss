@@ -1,0 +1,64 @@
+@use "breakpoints" as bp;
+
+:host {
+  display: flex;
+  justify-content: center;
+}
+
+.profile {
+  width: 100%;
+  @include bp.breakpoint(sm) {
+    margin: 5rem auto;
+    width: 80%;
+    box-shadow: var(--box-shadow);
+    border-radius: var(--border-radius);
+  }
+
+  &__menu {
+    margin-bottom: 2rem;
+  }
+
+  &__content {
+    @include bp.breakpoint(sm) {
+      padding: 0 3rem;
+    }
+  }
+
+  &__tabs {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+    width: 100%;
+    border-bottom: solid 0.1rem var(--tone-300);
+    text-align: center;
+    @include bp.breakpoint(sm) {
+      display: block;
+      text-align: left;
+    }
+  }
+
+  &__description {
+    text-align: justify;
+  }
+
+  &__teams {
+    justify-content: center;
+    display: flex;
+    @include bp.breakpoint(sm) {
+      justify-content: flex-start;
+    }
+  }
+
+  &__features {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    @include bp.breakpoint(md) {
+      flex-direction: row;
+    }
+  }
+  &__social-icons {
+    margin-bottom: 3rem;
+  }
+}

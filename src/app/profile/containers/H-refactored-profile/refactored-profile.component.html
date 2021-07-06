@@ -1,0 +1,42 @@
+<article class="profile container xs-row">
+  <aside class="profile__sidebar sm-4 xs-12">
+    <section class="profile__image">
+      <app-image
+        [notificationsCount]="(notifications$ | async)!"
+        src="assets/profile.png"
+      ></app-image>
+    </section>
+    <section class="profile__menu">
+      <app-menu [ready]="(ready$ | async)!"></app-menu>
+    </section>
+  </aside>
+  <main class="profile__content sm-8 xs-12">
+    <section class="profile__tabs">
+      <app-tabs>
+        <app-tab tabTitle="Profile">
+          <div class="profile__description">
+            <app-description
+              [data]="(description$ | async)!"
+            ></app-description></div
+        ></app-tab>
+        <app-tab class="profile__teams" tabTitle="Works with">
+          <app-image size="small" src="/assets/creativity.png"></app-image>
+          <app-image size="small" src="/assets/ideas.png"></app-image>
+          <app-image size="small" src="/assets/coding.png"></app-image>
+          <app-image size="small" src="/assets/art.png"></app-image>
+        </app-tab>
+      </app-tabs>
+    </section>
+    <section class="profile__features">
+      <app-skills
+        class="profile__skills"
+        [data]="(features$ | async)!"
+        [ngClass]="routeAnimationsElements"
+      ></app-skills>
+      <app-social-icons
+        class="profile__social-icons"
+        [ngClass]="routeAnimationsElements"
+      ></app-social-icons>
+    </section>
+  </main>
+</article>

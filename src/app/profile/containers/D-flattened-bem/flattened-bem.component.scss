@@ -1,0 +1,34 @@
+// Flattened BEM
+// Good solution when no more than 3 levels of nesting
+
+.profile {
+  //...
+  &__sidebar {
+    //...
+  }
+  &__content {
+    //...
+  }
+  &__image {
+    //...
+  }
+  &__links {
+    //...
+  }
+  &__tabs {
+    //...
+  }
+  &__description {
+    //...
+  }
+  &__teams {
+    //...
+  }
+  &__features {
+    //...
+  }
+
+  &__social-icons {
+    //...
+  }
+}

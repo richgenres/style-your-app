@@ -1,0 +1,30 @@
+<!-- Avoid this -->
+
+<div class="wrapper xs-row">
+  <div class="sm-4 xs-12">
+    <app-image
+      [notificationsCount]="(notifications$ | async)!"
+      src="assets/profile.png"
+    ></app-image>
+    <app-menu class="links" [ready]="(ready$ | async)!"></app-menu>
+  </div>
+  <div class="sm-8 xs-12 content">
+    <app-tabs class="tabs">
+      <app-tab tabTitle="Profile">
+        <app-description
+          class="description"
+          [data]="(description$ | async)!"
+        ></app-description
+      ></app-tab>
+      <app-tab class="teams" tabTitle="Works with">
+        <app-image size="small" src="/assets/art.png"></app-image>
+        <app-image size="small" src="/assets/creativity.png"></app-image>
+        <app-image size="small" src="/assets/ideas.png"></app-image>
+        <app-image size="small" src="/assets/coding.png"></app-image>
+      </app-tab>
+    </app-tabs>
+
+    <app-skills [data]="(features$ | async)!" class="skills"></app-skills>
+    <app-social-icons class="icons"></app-social-icons>
+  </div>
+</div>

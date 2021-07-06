@@ -1,0 +1,36 @@
+/*
+Avoid using BEM like this as too many tightly coupled descendants & names too long
+*/
+
+.profile {
+  &__sidebar {
+    //...
+    &__image {
+      //...
+    }
+    &__links {
+      //...
+    }
+  }
+
+  &__content {
+    //...
+    &__tabs {
+      //...
+      &__description {
+        //...
+      }
+
+      &__teams {
+        //...
+      }
+    }
+
+    &__features {
+      //...
+      &__social-icons {
+        //...
+      }
+    }
+  }
+}

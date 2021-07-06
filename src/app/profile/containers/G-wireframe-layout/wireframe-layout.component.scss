@@ -1,0 +1,53 @@
+@use "breakpoints" as bp;
+
+:host {
+  display: flex;
+  justify-content: center;
+}
+
+.profile {
+  background: red;
+  @include bp.breakpoint(sm) {
+    margin: 5rem auto;
+    width: 80%;
+  }
+
+  &__image {
+    background: pink;
+    min-height: 10rem;
+  }
+
+  &__menu {
+    background: antiquewhite;
+    min-height: 10rem;
+  }
+
+  &__content {
+    background: cyan;
+  }
+
+  &__tabs {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__features {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    background: coral;
+    @include bp.breakpoint(md) {
+      flex-direction: row;
+    }
+  }
+
+  &__skills {
+    background: darkkhaki;
+    flex: 8rem;
+    min-height: 10rem;
+  }
+  &__social-icons {
+    background: chartreuse;
+    flex: 1;
+  }
+}

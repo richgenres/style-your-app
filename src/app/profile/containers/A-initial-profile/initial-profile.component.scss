@@ -1,0 +1,29 @@
+@use "breakpoints" as bp;
+
+// Avoid this
+
+:host {
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.wrapper {
+  padding: 4rem 2rem;
+  @include bp.breakpoint(sm) {
+    margin: 5rem;
+    width: 80%;
+    max-width: 90rem;
+    box-shadow: -0.3rem -0.3rem 0.7rem #fff, 0.3rem 0.3rem 0.5rem #d4d4d4;
+    border-radius: 1rem;
+  }
+}
+
+.tabs {
+  display: inline-flex;
+  flex-direction: column;
+  width: 100%;
+  @include bp.breakpoint(sm) {
+    display: block;
+  }
+}

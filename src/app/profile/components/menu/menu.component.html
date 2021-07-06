@@ -1,0 +1,11 @@
+<ul
+  class="menu"
+  [class.menu--hidden]="!ready"
+  [class.menu--open]="ready || data.isAnimationDisabled"
+>
+  <li *ngFor="let item of menu">
+    <a
+      ><small>{{ item }}</small></a
+    >
+  </li>
+</ul>

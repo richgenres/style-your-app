@@ -1,0 +1,45 @@
+@use "breakpoints" as bp;
+
+.landing {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 100vh;
+
+  img {
+    height: 10rem;
+    margin-bottom: 2rem;
+  }
+
+  &__column {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    @include bp.breakpoint(sm) {
+      flex: 1;
+    }
+
+    i {
+      padding: 0 1rem;
+      color: var(--accept);
+      &.warn {
+        color: var(--warn);
+      }
+    }
+
+    &--cover {
+      background: var(--tone-300);
+    }
+  }
+  &__links {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,6 @@
+<div
+  [@routeAnimations]="prepareRoute(outlet)"
+  [@.disabled]="data?.isAnimationDisabled"
+>
+  <router-outlet #outlet="outlet"></router-outlet>
+</div>

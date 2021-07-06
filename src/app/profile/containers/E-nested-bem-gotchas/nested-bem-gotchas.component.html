@@ -1,0 +1,28 @@
+<!-- Avoid using BEM like this as too many tightly coupled descendants & names too long -->
+
+<article class="profile">
+  <aside class="profile__sidebar">
+    <section class="profile__sidebar__image">...profile image</section>
+    <section class="profile__sidebar__links">...menu links</section>
+  </aside>
+  <main class="profile__content">
+    <section class="profile__content__tabs">
+      <app-tabs>
+        <app-tab>
+          <div class="profile__content__tabs__description">
+            ...description
+          </div></app-tab
+        >
+        <app-tab>
+          <div class="profile__content__tabs__teams">...team images</div>
+        </app-tab>
+      </app-tabs>
+    </section>
+    <section class="profile__content__features">
+      <div class="profile__content__features__skills">...skills</div>
+      <div class="profile__content__features__social-icons">
+        ...social icons
+      </div>
+    </section>
+  </main>
+</article>

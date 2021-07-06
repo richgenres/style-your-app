@@ -1,0 +1,48 @@
+@use 'breakpoints' as bp;
+
+@mixin gutters {
+  margin-left: var(--gutter);
+  margin-right: var(--gutter);
+}
+
+@mixin base-row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: stretch;
+}
+
+@mixin col-generator($size) {
+  $columns: 12;
+
+  @for $i from 1 through $columns {
+    .#{$size}-#{$i} {
+      @include gutters;
+
+      flex: 0 0 auto;
+      flex-basis: calc(#{percentage($i / $columns)} - calc(var(--gutter) * 2));
+      max-width: calc(#{percentage($i / $columns)} - calc(var(--gutter) * 2));
+    }
+  }
+  .#{$size}-row {
+    @include base-row;
+  }
+}
+
+@include col-generator("xs");
+
+@include bp.breakpoint(sm) {
+  @include col-generator("sm");
+}
+
+@include bp.breakpoint(md) {
+  @include col-generator("md");
+}
+
+@include bp.breakpoint(lg) {
+  @include col-generator("lg");
+}
+
+@include bp.breakpoint(xl) {
+  @include col-generator("xl");
+}

@@ -1,0 +1,56 @@
+@use 'styles/reset';
+@use 'styles/variables';
+@use 'styles/breakpoints';
+@use 'styles/grid';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+:root {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: var(--font-family);
+  background: var(--tone-200);
+  overflow-y: scroll;
+  line-height: 2rem;
+  color: var(--tone-600);
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+  color: var(--primary-500);
+  margin-top: 1rem;
+}
+
+small {
+  font-size: 1.4rem;
+}
+
+h1 {
+  font-weight: 800;
+  font-size: 3rem;
+  margin: 1rem 0;
+}
+
+h2 {
+  font-weight: 500;
+  font-size: 2rem;
+  margin: 1rem 0;
+}
+
+.container {
+  max-width: 90rem;
+  min-width: 50%;
+  margin: 0 auto;
+  padding: 3rem 1rem;
+  left: 0;
+  right: 0;
+}

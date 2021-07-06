@@ -1,0 +1,58 @@
+<article class="landing">
+  <!-- here is an example of a BEM modifier -->
+  <section class="landing__column landing__column--cover">
+    <img src="assets/logo/angular-icon.svg" />
+    <h1 [ngClass]="routeAnimationsElements">Angular Sussex</h1>
+    <h2 [ngClass]="routeAnimationsElements">How to Style your App</h2>
+    <a
+      target="_blank"
+      href="https://www.linkedin.com/in/chris-green-38b070152/"
+      [ngClass]="routeAnimationsElements"
+      >with Chris Green</a
+    >
+  </section>
+  <section class="landing__column">
+    <div class="landing__links" [ngClass]="routeAnimationsElements">
+      <h2 [ngClass]="routeAnimationsElements">Demo</h2>
+
+      <a href="profile/initial"
+        >Initial Profile <i class="fas fa-times warn" aria-hidden="true"></i
+      ></a>
+      <a href="profile/revised"
+        >Revised Profile<i class="fas fa-times warn" aria-hidden="true"></i
+      ></a>
+
+      <a href="profile/layout"
+        >Wireframe Layout<i class="fas fa-check" aria-hidden="true"></i
+      ></a>
+
+      <a href="profile/refactor"
+        >Refactored Profile<i class="fas fa-check" aria-hidden="true"></i
+      ></a>
+    </div>
+    <br />
+    <div class="landing__links" [ngClass]="routeAnimationsElements">
+      <h2 [ngClass]="routeAnimationsElements">Useful links</h2>
+
+      <a target="_blank" href="http://getbem.com">Get BEM</a>
+      <a
+        target="_blank"
+        href="https://scalablecss.com/bem-nesting-grandchild-elements/"
+        >Deep Nested BEM
+      </a>
+      <a target="_blank" href="https://angular.io/guide/animations"
+        >Angular Animations</a
+      >
+
+      <a
+        target="_blank"
+        href="https://github.com/tomastrajan/angular-ngrx-material-starter"
+        >Angular Material Starter Project</a
+      >
+
+      <a target="_blank" href="https://dribbble.com/shots/popular/mobile"
+        >Dribbble (Designer/Creative resources)
+      </a>
+    </div>
+  </section>
+</article>

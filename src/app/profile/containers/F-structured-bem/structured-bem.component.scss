@@ -1,0 +1,49 @@
+@use "breakpoints" as bp;
+
+.profile {
+  // ...
+
+  &__image {
+    // ...
+  }
+
+  &__menu {
+    // ...
+  }
+
+  &__content {
+    // ...
+  }
+
+  &__tabs {
+    // ...
+  }
+
+  &__features {
+    // ...
+  }
+
+  &__skills {
+    // ...
+  }
+
+  &__social-icons {
+    // ...
+  }
+
+  .education {
+    // ...
+
+    &__schools {
+      // ...
+    }
+
+    &__education {
+      // ...
+    }
+
+    &__qualifications {
+      // ...
+    }
+  }
+}

@@ -1,0 +1,30 @@
+.menu {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 1.5rem;
+  li {
+    padding: 0.5rem 0;
+    transform: scale(1.15) translateY(-1.5rem);
+    opacity: 0;
+    transition: transform 0.5s cubic-bezier(0.4, 0.01, 0.165, 0.99),
+      opacity 0.6s cubic-bezier(0.4, 0.01, 0.165, 0.99);
+  }
+
+  &--hidden {
+    opacity: 0;
+  }
+  &--open {
+    li {
+      opacity: 1;
+      $menuItems: 4;
+      @for $j from 1 through $menuItems {
+        &:nth-child(#{$j}) {
+          transition-delay: #{0.1 + $j * 0.07}s;
+        }
+      }
+      transform: scale(1.15);
+    }
+  }
+}

@@ -1,0 +1,11 @@
+.skills {
+  min-height: 20rem;
+  position: relative;
+}
+app-loader {
+  display: block;
+  position: absolute;
+  transform: scale(0.4);
+  left: 2.2rem;
+  top: 1.5rem;
+}
